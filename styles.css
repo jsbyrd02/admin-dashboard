@@ -1,0 +1,62 @@
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+}
+
+.sidebar {
+  background-color: blue;
+  height: 100vh;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr;
+}
+
+.header {
+  color: black;
+}
+
+.header-top {
+  background-color: purple;
+  height: 50%;
+}
+
+.header-bottom {
+  background-color: yellow;
+  height: 50%;
+}
+
+.content {
+  color: black;
+  display: grid;
+  /* Use minmax */
+  grid-template-columns: 7fr 3fr;
+}
+
+.content-left {
+  background-color: red;
+}
+
+.content-right {
+  color: black;
+}
+
+.announcements {
+  background-color: green;
+  height: 50%;
+}
+
+.trending {
+  background-color: orange;
+  height: 50%;
+}
