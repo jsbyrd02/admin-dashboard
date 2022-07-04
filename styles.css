@@ -7,13 +7,41 @@
 
 body {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 220px 1fr;
   grid-template-rows: 1fr;
 }
 
 .sidebar {
-  background-color: blue;
   height: 100vh;
+  background-color: rgb(26, 167, 223);
+}
+
+.nav-a {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 1.2vh 0vw 1.2vh 1.55rem;
+  color: white;
+  font-weight: 450;
+}
+
+.nav-a>img {
+  width: 1rem;
+  height: auto;
+}
+
+#dashboard {
+  padding: 2vh 0vw 4vh 1rem;
+  font-size: 1.3rem;
+}
+
+#dashboard>img {
+  width: 2rem;
+  height: auto;
+}
+
+#settings {
+  padding-top: 5vh;
 }
 
 .main {
