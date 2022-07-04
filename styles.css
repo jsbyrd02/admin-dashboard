@@ -1,3 +1,9 @@
+:root {
+  --skyblue: rgb(26, 167, 223);
+  --white: rgb(255, 255, 255);
+  --light-gray: rgb(222, 222, 222);
+}
+
 * {
   font-family: 'Roboto', sans-serif;
   padding: 0;
@@ -7,20 +13,20 @@
 
 body {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: minmax(min-content, 220px) 1fr;
   grid-template-rows: 1fr;
 }
 
 .sidebar {
   height: 100vh;
-  background-color: rgb(26, 167, 223);
+  background-color: var(--skyblue);
 }
 
 .nav-a {
   display: flex;
   justify-content: left;
   align-items: center;
-  padding: 1.2vh 0vw 1.2vh 1.55rem;
+  padding: 1.2vh 1.55rem 1.2vh 1.55rem;
   color: white;
   font-weight: 450;
 }
@@ -31,7 +37,7 @@ body {
 }
 
 #dashboard {
-  padding: 2vh 0vw 4vh 1rem;
+  padding: 4vh 1rem 4vh 1rem;
   font-size: 1.3rem;
 }
 
@@ -44,19 +50,85 @@ body {
   padding-top: 5vh;
 }
 
+.nav-a:hover {
+  cursor: pointer;
+}
+
+#dashboard:hover {
+  cursor: default;
+}
+
 .main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 4fr;
 }
 
-.header {
-  color: black;
+.header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  height: 50%;
 }
 
-.header-top {
-  background-color: purple;
-  height: 50%;
+.header-top>form {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-top>form {
+  margin-left: 5vw;
+}
+
+.search-btn {
+  display: flex;
+  background-color: transparent;
+  border: none;
+}
+
+.search-input {
+  height: 1.2rem;
+  width: 40px;
+  flex: 1;
+  padding: 0.8rem;
+  margin-left: 20px;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  background-color: var(--light-gray);
+  font-size: 1rem;
+}
+
+.account {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0vh 3vw 0vh clamp(10px, 4vw, 100px);
+  gap: 1.2vw;
+}
+
+.notifications {
+  height: 1.6rem;
+  width: auto;
+  background-color: transparent;
+}
+
+.user-pic {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  width: auto;
+  border-radius: 50%
+}
+
+.account>p {
+  width: min-content;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .header-bottom {
